@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,7 @@ namespace Intermedix_INI_generator
     {
         private string imgName = null;
         private Visibility visCheckOrder = Visibility.Hidden;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -31,10 +33,14 @@ namespace Intermedix_INI_generator
         public void CreteIni()
         {
             var MyIni = new IniFile("Test.ini");
+            string dataInizioFormattata = datepickerDataInizio.Text.Substring(6,4) + datepickerDataInizio.Text.Substring(3,2) + datepickerDataInizio.Text.Substring(0,2);
+            string dataFineFormattata = datepickerDataFine.Text.Substring(6,4) + datepickerDataFine.Text.Substring(3,2) + datepickerDataFine.Text.Substring(0,2);
 
             MyIni.Write("DESCR", textCampaignDescription.Text, textCampaignName.Text);
             MyIni.Write("TIPO", (comboCampaignType.SelectedItem as ComboBoxItem).Tag.ToString(), textCampaignName.Text);
             MyIni.Write("IMG", @"dat\prodcons\" + imgName, textCampaignName.Text);
+            MyIni.Write("DATA_DA", dataInizioFormattata, textCampaignName.Text);
+            MyIni.Write("DATA_AL", dataFineFormattata, textCampaignName.Text);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -91,5 +97,6 @@ namespace Intermedix_INI_generator
                 btnImg.Content = imgName;
             }
         }
+
     }
 }
