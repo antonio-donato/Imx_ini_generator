@@ -30,6 +30,12 @@
         <Label x:Name="labelDataInizio" Content="Data Inizio&#xD;&#xA;" HorizontalAlignment="Left" Height="26" Margin="10,173,0,0" VerticalAlignment="Top" Width="128" Background="#FF6FE841"/>
         <Label x:Name="labelDataFine" Content="Data Fine" HorizontalAlignment="Left" Height="26" Margin="143,173,0,0" VerticalAlignment="Top" Width="128" Background="#FFF3F31D"/>
         <DatePicker x:Name="datepickerDataFine" HorizontalAlignment="Left" Margin="143,199,0,0" VerticalAlignment="Top" Width="128" Background="#FFF3F31D" Height="26"/>
+        <Label x:Name="labelRegione" Content="Regione" HorizontalAlignment="Left" Height="26" Margin="10,225,0,0" VerticalAlignment="Top" Width="122"/>
+        <ComboBox HorizontalAlignment="Left" Margin="143,225,0,0" VerticalAlignment="Top" Width="255">
+            <CheckBox Content="Lombardia" Tag="03"/>
+            <CheckBox Content="Piemonte" Tag="01"/>
+            <CheckBox Content="Val d'Aosta" Tag="02"/>
+        </ComboBox>
 
     </Grid>
 </Window>
