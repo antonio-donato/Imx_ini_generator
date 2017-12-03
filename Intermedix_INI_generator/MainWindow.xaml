@@ -55,7 +55,13 @@
             <CheckBox Content="Sardegna" Tag="20" Checked="CheckBox_Checked"/>
         </ComboBox>
         <Label x:Name="labelTesto" Content="Testo" HorizontalAlignment="Left" Height="26" Margin="10,251,0,0" VerticalAlignment="Top" Width="122" ToolTip="Testo da visualizzare nell'etichetta sopra all'immagine"/>
-        <TextBox x:Name="textTesto" HorizontalAlignment="Left" Height="26" Margin="143,252,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" ToolTip="Testo da visualizzare nell'etichetta sopra all'immagine"/>
+        <TextBox x:Name="textTesto" HorizontalAlignment="Left" Height="26" Margin="143,251,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" ToolTip="Testo da visualizzare nell'etichetta sopra all'immagine"/>
+        <Label x:Name="labelTesto_Copy" HorizontalAlignment="Left" Height="52" Margin="10,277,0,0" VerticalAlignment="Top" Width="133" ToolTip="Testo da visualizzare nell'etichetta sopra all'immagine">
+            <TextBlock TextWrapping="WrapWithOverflow">
+                    Codici Prodotto o ATC/GMP
+            </TextBlock>
+        </Label>
+        <Button x:Name="btnCodice" Content="Seleziona Codici" HorizontalAlignment="Left" Height="21" Margin="143,282,0,0" VerticalAlignment="Top" Width="150"/>
 
     </Grid>
 </Window>
