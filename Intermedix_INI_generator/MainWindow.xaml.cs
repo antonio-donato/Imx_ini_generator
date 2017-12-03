@@ -24,7 +24,7 @@ namespace Intermedix_INI_generator
         private string imgName = null;
         private Visibility visCheckOrder = Visibility.Hidden;
         List<string> myStrings = new List<string>(); // To Storage the seleted values
-        List<string> myCode = new List<string>(); // To Storage the seleted values
+        List<string> myCode = new List<string>(); // To Storage the codes
 
         public MainWindow()
         {
@@ -120,6 +120,12 @@ namespace Intermedix_INI_generator
             {
                 myStrings.Add(cb.Tag.ToString());
             }
+        }
+
+        private void btnCodice_Click(object sender, RoutedEventArgs e)
+        {
+            Codici win2 = new Codici();
+            win2.Show();
         }
     }
 }

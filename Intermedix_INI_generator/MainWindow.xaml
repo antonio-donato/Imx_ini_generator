@@ -15,7 +15,7 @@
         <Label x:Name="labelCampaignDescription_Copy" Content="Tipo Campagna" HorizontalAlignment="Left" Height="26" Margin="10,62,0,0" VerticalAlignment="Top" Width="122"/>
         <ComboBox x:Name="comboCampaignType" HorizontalAlignment="Left" Margin="143,62,0,0" VerticalAlignment="Top" Width="255" SelectionChanged="ComboBox_SelectionChanged">
             <ComboBoxItem Content="Tutte" Tag="**" IsSelected="True"/>
-            <ComboBoxItem Content="Test" Tag="VB"/>
+            <ComboBoxItem Content="Solo in Vendita al Banco" Tag="VB"/>
             <ComboBoxItem Content="Solo Ordine Diretto" Tag="OD"/>
             <ComboBoxItem Content="Solo Ordine a Grossista" Tag="OG"/>
             <ComboBoxItem Content="Entrambi gli Ordini (Diretto e Grossista)" Tag="OR"/>
@@ -61,7 +61,7 @@
                     Codici Prodotto o ATC/GMP
             </TextBlock>
         </Label>
-        <Button x:Name="btnCodice" Content="Seleziona Codici" HorizontalAlignment="Left" Height="21" Margin="143,282,0,0" VerticalAlignment="Top" Width="150"/>
+        <Button x:Name="btnCodice" Content="Seleziona Codici" HorizontalAlignment="Left" Height="21" Margin="143,282,0,0" VerticalAlignment="Top" Width="150" Click="btnCodice_Click"/>
 
     </Grid>
 </Window>
