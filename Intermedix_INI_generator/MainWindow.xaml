@@ -11,7 +11,7 @@
         <Label x:Name="labelCampaignName" Content="Nome Campagna" HorizontalAlignment="Left" Height="26" Margin="10,10,0,0" VerticalAlignment="Top" Width="122"/>
         <Label x:Name="labelCampaignDescription" Content="Descrizione" HorizontalAlignment="Left" Height="26" Margin="10,36,0,0" VerticalAlignment="Top" Width="122"/>
         <TextBox x:Name="textCampaignName" HorizontalAlignment="Left" Height="26" Margin="143,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" TextChanged="TextBox_TextChanged" Text="Nome_Campagna"/>
-        <TextBox x:Name="textCampaignDescription" HorizontalAlignment="Left" Height="26" Margin="143,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" TextChanged="TextBox_TextChanged" Text="Descr_Campagna"/>
+        <TextBox x:Name="textCampaignDescription" HorizontalAlignment="Left" Height="26" Margin="143,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" Text="Descr_Campagna"/>
         <Label x:Name="labelCampaignDescription_Copy" Content="Tipo Campagna" HorizontalAlignment="Left" Height="26" Margin="10,62,0,0" VerticalAlignment="Top" Width="122"/>
         <ComboBox x:Name="comboCampaignType" HorizontalAlignment="Left" Margin="143,62,0,0" VerticalAlignment="Top" Width="255" SelectionChanged="ComboBox_SelectionChanged">
             <ComboBoxItem Content="Tutte" Tag="**" IsSelected="True"/>
@@ -24,7 +24,7 @@
         <Image x:Name="imgVis" HorizontalAlignment="Left" Height="65" Margin="298,89,0,0" VerticalAlignment="Top" Width="100" Stretch="Fill"/>
         <Button x:Name="btnImg" Content="Seleziona Immagine" HorizontalAlignment="Left" Height="21" Margin="143,93,0,0" VerticalAlignment="Top" Width="150" Click="btnImg_Click"/>
         <Label x:Name="labelProdottoPerGiacenza" Content="Prodotto per Giacenza" HorizontalAlignment="Left" Height="26" Margin="10,119,0,0" VerticalAlignment="Top" Width="128"/>
-        <TextBox x:Name="textProdottoPerGiacenza" HorizontalAlignment="Left" Height="26" Margin="143,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="textProdottoPerGiacenza" HorizontalAlignment="Left" Height="26" Margin="143,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
         <CheckBox x:Name="chkOrderButton" Content="Bottone per Ordine" HorizontalAlignment="Left" Height="16" Margin="143,154,0,0" VerticalAlignment="Top" Width="150" IsEnabled="True" Visibility="Visible"/>
         <DatePicker x:Name="datepickerDataInizio" HorizontalAlignment="Left" Margin="10,199,0,0" VerticalAlignment="Top" Width="128" Background="#FF6FE841" Height="26"/>
         <Label x:Name="labelDataInizio" Content="Data Inizio&#xD;&#xA;" HorizontalAlignment="Left" Height="26" Margin="10,173,0,0" VerticalAlignment="Top" Width="128" Background="#FF6FE841"/>
@@ -32,10 +32,30 @@
         <DatePicker x:Name="datepickerDataFine" HorizontalAlignment="Left" Margin="143,199,0,0" VerticalAlignment="Top" Width="128" Background="#FFF3F31D" Height="26"/>
         <Label x:Name="labelRegione" Content="Regione" HorizontalAlignment="Left" Height="26" Margin="10,225,0,0" VerticalAlignment="Top" Width="122"/>
         <ComboBox HorizontalAlignment="Left" Margin="143,225,0,0" VerticalAlignment="Top" Width="255">
-            <CheckBox Content="Lombardia" Tag="03"/>
-            <CheckBox Content="Piemonte" Tag="01"/>
-            <CheckBox Content="Val d'Aosta" Tag="02"/>
+            <CheckBox Content="Lombardia" Tag="03" Checked="CheckBox_Checked"/>
+            <CheckBox Content="Piemonte" Tag="01" Checked="CheckBox_Checked"/>
+            <CheckBox Content="Val d'Aosta" Tag="02" Checked="CheckBox_Checked"/>
+            <CheckBox Content="Bolzano" Tag="41" Checked="CheckBox_Checked"/>
+            <CheckBox Content="Trento" Tag="42" Checked="CheckBox_Checked"/>
+            <CheckBox Content="Veneto" Tag="05" Checked="CheckBox_Checked"/>
+            <CheckBox Content="Friuli" Tag="06" Checked="CheckBox_Checked"/>
+            <CheckBox Content="Liguria" Tag="07" Checked="CheckBox_Checked"/>
+            <CheckBox Content="Emilia Romagna" Tag="08" Checked="CheckBox_Checked"/>
+            <CheckBox Content="Toscana" Tag="09" Checked="CheckBox_Checked"/>
+            <CheckBox Content="Umbria" Tag="10" Checked="CheckBox_Checked"/>
+            <CheckBox Content="Marche" Tag="11" Checked="CheckBox_Checked"/>
+            <CheckBox Content="Lazio" Tag="12" Checked="CheckBox_Checked"/>
+            <CheckBox Content="Abruzzo" Tag="13" Checked="CheckBox_Checked"/>
+            <CheckBox Content="Molise" Tag="14" Checked="CheckBox_Checked"/>
+            <CheckBox Content="Campania" Tag="15" Checked="CheckBox_Checked"/>
+            <CheckBox Content="Puglia" Tag="16" Checked="CheckBox_Checked"/>
+            <CheckBox Content="Basilicata" Tag="17" Checked="CheckBox_Checked"/>
+            <CheckBox Content="Calabria" Tag="18" Checked="CheckBox_Checked"/>
+            <CheckBox Content="Sicilia" Tag="19" Checked="CheckBox_Checked"/>
+            <CheckBox Content="Sardegna" Tag="20" Checked="CheckBox_Checked"/>
         </ComboBox>
+        <Label x:Name="labelTesto" Content="Testo" HorizontalAlignment="Left" Height="26" Margin="10,251,0,0" VerticalAlignment="Top" Width="122" ToolTip="Testo da visualizzare nell'etichetta sopra all'immagine"/>
+        <TextBox x:Name="textTesto" HorizontalAlignment="Left" Height="26" Margin="143,252,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" ToolTip="Testo da visualizzare nell'etichetta sopra all'immagine"/>
 
     </Grid>
 </Window>

@@ -23,6 +23,8 @@ namespace Intermedix_INI_generator
     {
         private string imgName = null;
         private Visibility visCheckOrder = Visibility.Hidden;
+        List<string> myStrings = new List<string>(); // To Storage the seleted values
+        List<string> myCode = new List<string>(); // To Storage the seleted values
 
         public MainWindow()
         {
@@ -35,12 +37,25 @@ namespace Intermedix_INI_generator
             var MyIni = new IniFile("Test.ini");
             string dataInizioFormattata = datepickerDataInizio.Text.Substring(6,4) + datepickerDataInizio.Text.Substring(3,2) + datepickerDataInizio.Text.Substring(0,2);
             string dataFineFormattata = datepickerDataFine.Text.Substring(6,4) + datepickerDataFine.Text.Substring(3,2) + datepickerDataFine.Text.Substring(0,2);
+            string regioni = null;
 
             MyIni.Write("DESCR", textCampaignDescription.Text, textCampaignName.Text);
             MyIni.Write("TIPO", (comboCampaignType.SelectedItem as ComboBoxItem).Tag.ToString(), textCampaignName.Text);
             MyIni.Write("IMG", @"dat\prodcons\" + imgName, textCampaignName.Text);
             MyIni.Write("DATA_DA", dataInizioFormattata, textCampaignName.Text);
             MyIni.Write("DATA_AL", dataFineFormattata, textCampaignName.Text);
+
+            if (myStrings.Count > 0)
+            {
+                foreach (string s in myStrings)
+                {
+                    regioni = regioni + s + "|";
+                }
+            }
+
+            MyIni.Write("REGIONE", regioni, textCampaignName.Text);
+            MyIni.Write("TESTO", textTesto.Text, textCampaignName.Text);
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -98,5 +113,13 @@ namespace Intermedix_INI_generator
             }
         }
 
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            CheckBox cb = sender as CheckBox;
+            if (cb != null)
+            {
+                myStrings.Add(cb.Tag.ToString());
+            }
+        }
     }
 }
