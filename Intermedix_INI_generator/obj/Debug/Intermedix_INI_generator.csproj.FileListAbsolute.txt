@@ -12,3 +12,6 @@ D:\Github_repository\Intermedix_INI_generator\Intermedix_INI_generator\obj\Debug
 D:\Github_repository\Intermedix_INI_generator\Intermedix_INI_generator\obj\Debug\Intermedix_INI_generator.csproj.GenerateResource.Cache
 D:\Github_repository\Intermedix_INI_generator\Intermedix_INI_generator\obj\Debug\Intermedix_INI_generator.exe
 D:\Github_repository\Intermedix_INI_generator\Intermedix_INI_generator\obj\Debug\Intermedix_INI_generator.pdb
+D:\Github_repository\Intermedix_INI_generator\Intermedix_INI_generator\obj\Debug\Intermedix_INI_generator.csproj.CoreCompileInputs.cache
+D:\Github_repository\Intermedix_INI_generator\Intermedix_INI_generator\obj\Debug\Codici.g.cs
+D:\Github_repository\Intermedix_INI_generator\Intermedix_INI_generator\obj\Debug\Codici.baml
