@@ -23,5 +23,17 @@ namespace Intermedix_INI_generator
         {
             InitializeComponent();
         }
+
+        private void btnAddCode_Click(object sender, RoutedEventArgs e)
+        {
+            var data = new Test { Test1 = "Test1"};
+
+            dataGridCodici.Items.Add(data);
+        }
+    }
+
+    public class Test
+    {
+        public string Test1 { get; set; }
     }
 }

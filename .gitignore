@@ -1,1 +1,5 @@
 .vs/Intermedix_INI_generator/v15/sqlite3/storage.ide
+
+#ignoro cartelle
+[Bb]in/
+[Oo]bj/
