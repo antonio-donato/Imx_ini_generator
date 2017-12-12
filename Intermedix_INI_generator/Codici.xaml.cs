@@ -26,10 +26,14 @@ namespace Intermedix_INI_generator
 
         private void btnAddCode_Click(object sender, RoutedEventArgs e)
         {
-            String testoImmesso;
 
-            testoImmesso = txtInserimento.Text;
-            lsCodici.Items.Add(testoImmesso);
+            lsCodici.Items.Add(txtInserimento.Text);
+            txtInserimento.Text = null;
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            txtInserimento.Focus();
         }
     }
 
