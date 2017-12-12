@@ -5,12 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Intermedix_INI_generator"
         mc:Ignorable="d"
-        Title="Codici" Height="300" Width="300">
+        Title="Codici" Height="292.225" Width="300">
     <Grid>
-        <DataGrid x:Name="dataGridCodici" HorizontalAlignment="Left" Height="218" Margin="10,10,0,0" VerticalAlignment="Top" Width="272" RowHeight="20">
-            <DataGridTextColumn Header="Codice" IsReadOnly="False" Binding="{Binding Path=Test1}" Width="50"></DataGridTextColumn>
-        </DataGrid>
-        <Button x:Name="btnAddCode" Content="Aggiungi codice" HorizontalAlignment="Left" Margin="10,228,0,0" VerticalAlignment="Top" Width="126" Click="btnAddCode_Click"/>
+        <Button x:Name="btnAddCode" Content="Aggiungi codice" HorizontalAlignment="Left" Margin="158,10,0,0" VerticalAlignment="Top" Width="124" Click="btnAddCode_Click" Height="22"/>
         <Button x:Name="btnEnd" Content="Fine" HorizontalAlignment="Left" Margin="156,228,0,0" VerticalAlignment="Top" Width="126"/>
+        <TextBox x:Name="txtInserimento" HorizontalAlignment="Left" Height="22" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="141"/>
+        <ListBox x:Name="lsCodici" HorizontalAlignment="Left" Height="186" Margin="10,37,0,0" VerticalAlignment="Top" Width="274"/>
     </Grid>
 </Window>
