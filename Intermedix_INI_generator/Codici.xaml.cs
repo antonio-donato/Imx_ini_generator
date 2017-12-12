@@ -26,9 +26,10 @@ namespace Intermedix_INI_generator
 
         private void btnAddCode_Click(object sender, RoutedEventArgs e)
         {
-            var data = new Test { Test1 = "Test1"};
+            String testoImmesso;
 
-            dataGridCodici.Items.Add(data);
+            testoImmesso = txtInserimento.Text;
+            lsCodici.Items.Add(testoImmesso);
         }
     }
 
