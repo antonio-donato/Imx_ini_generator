@@ -13,7 +13,7 @@
         <TextBox x:Name="textCampaignName" HorizontalAlignment="Left" Height="26" Margin="143,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" TextChanged="TextBox_TextChanged" Text="Nome_Campagna"/>
         <TextBox x:Name="textCampaignDescription" HorizontalAlignment="Left" Height="26" Margin="143,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" Text="Descr_Campagna"/>
         <Label x:Name="labelCampaignDescription_Copy" Content="Tipo Campagna" HorizontalAlignment="Left" Height="26" Margin="10,62,0,0" VerticalAlignment="Top" Width="122"/>
-        <ComboBox x:Name="comboCampaignType" HorizontalAlignment="Left" Margin="143,62,0,0" VerticalAlignment="Top" Width="255" SelectionChanged="ComboBox_SelectionChanged">
+        <ComboBox x:Name="comboCampaignType" HorizontalAlignment="Left" Margin="143,62,0,0" VerticalAlignment="Top" Width="255">
             <ComboBoxItem Content="Tutte" Tag="**" IsSelected="True"/>
             <ComboBoxItem Content="Solo in Vendita al Banco" Tag="VB"/>
             <ComboBoxItem Content="Solo Ordine Diretto" Tag="OD"/>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Intermedix_INI_generator"
         mc:Ignorable="d"
-        Title="Codici" Height="292.225" Width="300" Loaded="Window_Loaded">
+        Title="Codici" Height="292.225" Width="300" Loaded="Window_Loaded" Closing="Window_Closing">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="175*"/>

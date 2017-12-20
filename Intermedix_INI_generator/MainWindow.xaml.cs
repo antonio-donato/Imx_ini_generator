@@ -19,6 +19,7 @@ namespace Intermedix_INI_generator
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    
     public partial class MainWindow : Window
     {
         private string imgName = null;
@@ -29,7 +30,6 @@ namespace Intermedix_INI_generator
         public MainWindow()
         {
             InitializeComponent();
-
         }
 
         public void CreteIni()
@@ -77,12 +77,6 @@ namespace Intermedix_INI_generator
 
         }
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            //string gettag = (comboCampaignType.SelectedItem as ComboBoxItem).Tag.ToString();
-            //MessageBox.Show(gettag);
-        }
-
         private void btnImg_Click(object sender, RoutedEventArgs e)
         {
             // Create OpenFileDialog 
@@ -124,8 +118,9 @@ namespace Intermedix_INI_generator
 
         private void btnCodice_Click(object sender, RoutedEventArgs e)
         {
-            Codici win2 = new Codici();
+            Codici win2 = new Codici(myCode);
             win2.Show();
         }
+
     }
 }

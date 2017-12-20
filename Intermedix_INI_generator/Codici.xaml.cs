@@ -19,8 +19,15 @@ namespace Intermedix_INI_generator
     /// </summary>
     public partial class Codici : Window
     {
+        private List<String> elenco = new List<string>();
         public Codici()
         {
+            InitializeComponent();
+        }
+
+        public Codici(List<String> value)
+        {
+            elenco = value;
             InitializeComponent();
         }
 
@@ -33,6 +40,10 @@ namespace Intermedix_INI_generator
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            foreach (string s in elenco)
+            {
+                lsCodici.Items.Add(s);
+            }
             txtInserimento.Focus();
         }
 
@@ -41,10 +52,13 @@ namespace Intermedix_INI_generator
             lsCodici.Items.RemoveAt(lsCodici.SelectedIndex);
         }
 
-    }
-
-    public class Test
-    {
-        public string Test1 { get; set; }
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            elenco.Clear();
+            foreach (String strCol in lsCodici.Items)
+            {
+                elenco.Add(strCol);
+            }
+        }
     }
 }
