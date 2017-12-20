@@ -14,6 +14,12 @@
         <Button x:Name="btnAddCode" Content="Aggiungi codice" HorizontalAlignment="Left" Margin="160,10,0,0" VerticalAlignment="Top" Width="124" Click="btnAddCode_Click" Height="22" IsDefault="True" Grid.ColumnSpan="2"/>
         <Button x:Name="btnEnd" Content="Fine" HorizontalAlignment="Left" Margin="160,228,0,0" VerticalAlignment="Top" Width="124" Grid.ColumnSpan="2"/>
         <TextBox x:Name="txtInserimento" HorizontalAlignment="Left" Height="22" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145"/>
-        <ListBox x:Name="lsCodici" HorizontalAlignment="Left" Height="186" Margin="10,37,0,0" VerticalAlignment="Top" Width="274" Grid.ColumnSpan="2"/>
+        <ListBox x:Name="lsCodici" HorizontalAlignment="Left" Height="186" Margin="10,37,0,0" VerticalAlignment="Top" Width="274" Grid.ColumnSpan="2" MouseRightButtonDown="MenuItemDelete_Click">
+            <ListBox.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Delete" Click="MenuItemDelete_Click"/>
+                </ContextMenu>
+            </ListBox.ContextMenu>
+        </ListBox>
     </Grid>
 </Window>

@@ -35,6 +35,12 @@ namespace Intermedix_INI_generator
         {
             txtInserimento.Focus();
         }
+
+        private void MenuItemDelete_Click(object sender, RoutedEventArgs e)
+        {
+            lsCodici.Items.RemoveAt(lsCodici.SelectedIndex);
+        }
+
     }
 
     public class Test
