@@ -5,15 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Intermedix_INI_generator"
         mc:Ignorable="d"
+<<<<<<< HEAD
         Title="Codici" Height="292.225" Width="300" Loaded="Window_Loaded">
+=======
+        Title="Codici" Height="292.225" Width="300" Loaded="Window_Loaded" Closing="Window_Closing">
+>>>>>>> develop
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="175*"/>
             <ColumnDefinition Width="118*"/>
         </Grid.ColumnDefinitions>
+<<<<<<< HEAD
         <Button x:Name="btnAddCode" Content="Aggiungi codice" HorizontalAlignment="Left" Margin="158,10,0,0" VerticalAlignment="Top" Width="124" Click="btnAddCode_Click" Height="22" IsDefault="True" Grid.ColumnSpan="2"/>
         <Button x:Name="btnEnd" Content="Fine" HorizontalAlignment="Left" Margin="156,228,0,0" VerticalAlignment="Top" Width="126" Grid.ColumnSpan="2"/>
         <TextBox x:Name="txtInserimento" HorizontalAlignment="Left" Height="22" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="141"/>
         <ListBox x:Name="lsCodici" HorizontalAlignment="Left" Height="186" Margin="10,37,0,0" VerticalAlignment="Top" Width="274" Grid.ColumnSpan="2"/>
+=======
+        <Button x:Name="btnAddCode" Content="Aggiungi codice" HorizontalAlignment="Left" Margin="160,10,0,0" VerticalAlignment="Top" Width="124" Click="btnAddCode_Click" Height="22" IsDefault="True" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnEnd" Content="Fine" HorizontalAlignment="Left" Margin="160,228,0,0" VerticalAlignment="Top" Width="124" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtInserimento" HorizontalAlignment="Left" Height="22" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145"/>
+        <ListBox x:Name="lsCodici" HorizontalAlignment="Left" Height="186" Margin="10,37,0,0" VerticalAlignment="Top" Width="274" Grid.ColumnSpan="2" MouseRightButtonDown="MenuItemDelete_Click">
+            <ListBox.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Delete" Click="MenuItemDelete_Click"/>
+                </ContextMenu>
+            </ListBox.ContextMenu>
+        </ListBox>
+>>>>>>> develop
     </Grid>
 </Window>
