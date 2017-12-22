@@ -25,15 +25,12 @@ namespace Intermedix_INI_generator
             InitializeComponent();
         }
 
-<<<<<<< HEAD
-=======
         public Codici(List<String> value)
         {
             elenco = value;
             InitializeComponent();
         }
 
->>>>>>> develop
         private void btnAddCode_Click(object sender, RoutedEventArgs e)
         {
 
@@ -43,15 +40,6 @@ namespace Intermedix_INI_generator
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-<<<<<<< HEAD
-            txtInserimento.Focus();
-        }
-    }
-
-    public class Test
-    {
-        public string Test1 { get; set; }
-=======
             foreach (string s in elenco)
             {
                 lsCodici.Items.Add(s);
@@ -72,6 +60,5 @@ namespace Intermedix_INI_generator
                 elenco.Add(strCol);
             }
         }
->>>>>>> develop
     }
 }
