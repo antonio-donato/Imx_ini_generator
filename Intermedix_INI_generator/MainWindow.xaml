@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="Intermedix Ini Generator" Height="444.434" Width="525">
     <Grid RenderTransformOrigin="0.481,0.485">
+        <GroupBox Header="Funzione Bottone" HorizontalAlignment="Left" Height="87" Margin="10,318,0,0" VerticalAlignment="Top" Width="249"/>
         <Button Content="Crea File INI" HorizontalAlignment="Left" Height="32" Margin="291,371,0,0" VerticalAlignment="Top" Width="216" Click="Button_Click"/>
         <Label x:Name="labelCampaignName" Content="Nome Campagna" HorizontalAlignment="Left" Height="26" Margin="10,10,0,0" VerticalAlignment="Top" Width="122"/>
         <Label x:Name="labelCampaignDescription" Content="Descrizione" HorizontalAlignment="Left" Height="26" Margin="10,36,0,0" VerticalAlignment="Top" Width="122"/>
@@ -27,7 +28,7 @@
         <TextBox x:Name="textProdottoPerGiacenza" HorizontalAlignment="Left" Height="26" Margin="143,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
         <CheckBox x:Name="chkOrderButton" Content="Bottone per Ordine" HorizontalAlignment="Left" Height="16" Margin="143,154,0,0" VerticalAlignment="Top" Width="150" IsEnabled="True" Visibility="Visible"/>
         <DatePicker x:Name="datepickerDataInizio" HorizontalAlignment="Left" Margin="10,199,0,0" VerticalAlignment="Top" Width="128" Background="#FF6FE841" Height="26"/>
-        <Label x:Name="labelDataInizio" Content="Data Inizio&#xD;&#xA;" HorizontalAlignment="Left" Height="26" Margin="10,173,0,0" VerticalAlignment="Top" Width="128" Background="#FF6FE841"/>
+        <Label x:Name="labelDataInizio" Content="Data Inizio&#xA;" HorizontalAlignment="Left" Height="26" Margin="10,173,0,0" VerticalAlignment="Top" Width="128" Background="#FF6FE841"/>
         <Label x:Name="labelDataFine" Content="Data Fine" HorizontalAlignment="Left" Height="26" Margin="143,173,0,0" VerticalAlignment="Top" Width="128" Background="#FFF3F31D"/>
         <DatePicker x:Name="datepickerDataFine" HorizontalAlignment="Left" Margin="143,199,0,0" VerticalAlignment="Top" Width="128" Background="#FFF3F31D" Height="26"/>
         <Label x:Name="labelRegione" Content="Regione" HorizontalAlignment="Left" Height="26" Margin="10,225,0,0" VerticalAlignment="Top" Width="122"/>
@@ -57,11 +58,13 @@
         <Label x:Name="labelTesto" Content="Testo" HorizontalAlignment="Left" Height="26" Margin="10,251,0,0" VerticalAlignment="Top" Width="122" ToolTip="Testo da visualizzare nell'etichetta sopra all'immagine"/>
         <TextBox x:Name="textTesto" HorizontalAlignment="Left" Height="26" Margin="143,251,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" ToolTip="Testo da visualizzare nell'etichetta sopra all'immagine"/>
         <Label x:Name="labelTesto_Copy" HorizontalAlignment="Left" Height="52" Margin="10,277,0,0" VerticalAlignment="Top" Width="133" ToolTip="Testo da visualizzare nell'etichetta sopra all'immagine">
-            <TextBlock TextWrapping="WrapWithOverflow">
-                    Codici Prodotto o ATC/GMP
-            </TextBlock>
+            <TextBlock TextWrapping="WrapWithOverflow"><Run Text="Codici Prodotto o ATC/GMP"/></TextBlock>
         </Label>
         <Button x:Name="btnCodice" Content="Seleziona Codici" HorizontalAlignment="Left" Height="21" Margin="143,282,0,0" VerticalAlignment="Top" Width="150" Click="btnCodice_Click"/>
+        <RadioButton Content="PDF" HorizontalAlignment="Left" Height="17" Margin="15,337,0,0" VerticalAlignment="Top" Width="72" GroupName="groupButtonFunction"/>
+        <RadioButton Content="Link" HorizontalAlignment="Left" Height="17" Margin="15,354,0,0" VerticalAlignment="Top" Width="72" GroupName="groupButtonFunction"/>
+        <RadioButton Content="File" HorizontalAlignment="Left" Height="17" Margin="15,371,0,0" VerticalAlignment="Top" Width="72" GroupName="groupButtonFunction"/>
+        <RadioButton Content="nessuno" HorizontalAlignment="Left" Height="17" Margin="15,388,0,0" VerticalAlignment="Top" Width="72" GroupName="groupButtonFunction"/>
 
     </Grid>
 </Window>
