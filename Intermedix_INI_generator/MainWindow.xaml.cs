@@ -60,20 +60,50 @@ namespace Intermedix_INI_generator
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            CreteIni();
+            Risultato checkError = new Risultato();
+            checkError = CheckFields();
+
+            switch (checkError)
+            {
+                case Risultato.ErrData:
+                    MessageBox.Show("Le date devono essere valorizzate");
+                    break;
+                case Risultato.ErrText:
+                    MessageBox.Show("Un campo risulta vuoto!");
+                    break;
+                case Risultato.AllOk:
+                    CreteIni();
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+        }
+
+        private Risultato CheckFields()
+        {
+            if (textButtonFunction.Text == string.Empty)
+                return Risultato.ErrText;
+            if (textCampaignName.Text == string.Empty)
+                return Risultato.ErrText;
+            if (textCampaignDescription.Text == string.Empty)
+                return Risultato.ErrText;
+            if (textTesto.Text == string.Empty)
+                return Risultato.ErrText;
+            if (datepickerDataInizio.Text == String.Empty)
+                return Risultato.ErrData;
+            if (datepickerDataFine.Text == String.Empty)
+                return Risultato.ErrData;
+            return Risultato.AllOk;
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            string testo1 = (sender as TextBox).Text;
-            //var testo = textProdottoPerGiacenza.Text;
+            string testo = ((TextBox) sender).Text;
 
-            if (testo1 != String.Empty)
+            if (testo != String.Empty)
             {
                 visCheckOrder = Visibility.Visible;
             }
-
-            //chkOrderButton.Visibility = visCheckOrder;
 
         }
 
@@ -121,6 +151,14 @@ namespace Intermedix_INI_generator
             Codici win2 = new Codici(myCode);
             win2.Show();
         }
+
+    }
+
+    internal enum Risultato 
+    {
+        ErrData,
+        ErrText,
+        AllOk
 
     }
 }
